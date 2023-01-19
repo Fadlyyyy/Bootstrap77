@@ -7,10 +7,24 @@ body {
     margin-top: 30px;
 }
 
+.jumbotron {
+    height: 400px;
+    background-image: url("../img/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 - 100px;
+    color: #eaeaea;
+    overflow: hidden;
+}
+
+.jumbotron h1, jumbotron p {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
 
 .jumbotron img {
     width: 200px;
-    border: 5px solid #666;
+    border: 5px solid #eaeaea;
+    box-shadow:  1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 hr {
@@ -22,10 +36,40 @@ section {
     min-height: 600px;
 }
 
+.pKiri, .pKanan {
+    opacity: 0;
+    transform: translate(-50px,0) rotate(15deg);
+    transition: 1s;
+}  
+/* ini kan buat di hilangkan isi dari about kan? Lalu di isi nanti rotate 15deg ketika setelahnya di masukkan code .pMuncul */
+
+.pKanan {
+    transform: translate(50px, 0) rotate(-15deg);
+} 
+
+   /* Ini dibuat agar si about yg sebelah kanan bisa rotate nya pas dengan yg about kiri, ok saya paham */
+
+.pKiri.pMuncul, .pKanan.pMuncul {
+    opacity: 1;
+    transform: translate(0,0);
+}  
+
+/* Ini kan untuk muncullin yg sebelumnya opacity 0, lalu muncul disini dan pakai translate 0,0 jadi kembali lg.  */
 
 .portfolio {
     background-color: #eee;
 }
+
+.portfolio .thumbnail{
+    opacity: 0 ;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.portfolio .thumbnail.muncul{
+    opacity: 1 ;
+    transform: translate(0,0);
+} 
 
 
 .contact {
