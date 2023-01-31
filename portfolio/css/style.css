@@ -38,7 +38,7 @@ section {
 
 .pKiri, .pKanan {
     opacity: 0;
-    transform: translate(-50px,0) rotate(15deg);
+    transform: translate(-50px, 0) rotate(15deg);
     transition: 1s;
 }  
 /* ini kan buat di hilangkan isi dari about kan? Lalu di isi nanti rotate 15deg ketika setelahnya di masukkan code .pMuncul */
